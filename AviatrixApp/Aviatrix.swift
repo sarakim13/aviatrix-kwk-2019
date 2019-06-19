@@ -40,7 +40,8 @@ class Aviatrix {
     func flyTo(destination : String) {
         // STEP: add to distance travelled, fuel level
         distanceTraveled += distanceTo(home: location, target: destination)
-        fuelLevel -= Double(distanceTraveled)*milesPerGallon
+        //fuelLevel -= Double(distanceTraveled)*milesPerGallon
+        fuelLevel -= Double(distanceTraveled) / milesPerGallon
         // STEP: store location in func
         location = destination
         milesPerGallon = 0.55 - (fuelLevel)*(0.00005)
